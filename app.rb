@@ -1,20 +1,26 @@
 require 'prototyping_kit'
+require 'sinatra/content_for'
 
 class App < PrototypingKit::App
-  # The following line imports examples of design patterns, available in the
-  # app at `/patterns`. Remove or comment it out to disable.
-  #
-  include PrototypingKit::Patterns
+  helpers Sinatra::ContentFor
 
-  # This includes an example flow. You can see the code and views for this
-  # example in the following files:
-  #
-  # - lib/prototyping_kit/example.rb
-  # - lib/prototyping_kit/views/example/
-  #
-  include PrototypingKit::Example
+  def view_path(path)
+    File.join( File.dirname(__FILE__), 'views', "#{path}.erb")
+  end
+
+  def self.get_and_render_erb(url, template)
+    action = ->{
+      erb(template.to_sym)
+    }
+    get(url, &action)
+  end
 
   get "/" do
     erb :index
   end
+
+  get_and_render_erb('/simple-guidance', 'simple_guidance/index')
+  get_and_render_erb('/simple-guidance/technology', 'simple_guidance/technology')
+  get_and_render_erb('/simple-guidance/technology/cloud-services', 'simple_guidance/cloud_services')
+
 end

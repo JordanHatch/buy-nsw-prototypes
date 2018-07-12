@@ -4,8 +4,8 @@
 <head>
   <link rel="stylesheet" href="/assets/application.css">
   <script type="text/javascript" src="/assets/application.js"></script>
-  
-  <title>Prototyping Kit</title>
+
+  <title>buy.nsw prototypes</title>
 </head>
 
 <body>
@@ -17,40 +17,21 @@
             <div class="logo-container">
               <span class="logo">NSW Government</span>
             </div>
-            <span class="site-title">Service name</span>
+            <% unless content_for?(:skip_site_title) %>
+              <span class="site-title">buy.nsw</span>
+            <% end %>
           </a>
         </h1>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main class="<%= yield_content :main_classes %>">
     <%= yield %>
   </main>
 
   <footer class="global">
     <div class="container">
-      <div class="row">
-        <ul class="footer-link-list">
-          <h3>Footer column one</h3>
-          <li><a href="">Link one</a></li>
-          <li><a href="">Link two</a></li>
-          <li><a href="">Link three</a></li>
-        </ul>
-        <ul class="footer-link-list">
-          <h3>Footer column two</h3>
-          <li><a href="">Link four</a></li>
-          <li><a href="">Link five</a></li>
-          <li><a href="">Link six</a></li>
-        </ul>
-        <ul class="footer-link-list">
-          <h3>Footer column three</h3>
-          <li><a href="">Link seven</a></li>
-          <li><a href="">Link eight</a></li>
-          <li><a href="">Link nine</a></li>
-        </ul>
-      </div>
-
       <div class="footer-bottom-row">
         <div class="footer-legal">
           <ul>
