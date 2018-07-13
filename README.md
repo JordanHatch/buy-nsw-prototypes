@@ -22,4 +22,10 @@ bin/shotgun -p 5000
 open http://localhost:5000
 ```
 
+Alternatively, you can start the server with `rerun`.
+
+```
+bin/rerun foreman start
+```
+
 More information about what you can do with the kit can be found in [the prototyping kit repository](https://github.com/digitalnsw/prototyping-kit).
