@@ -1,5 +1,9 @@
+@import 'buyer_dashboard/search';
+
 .buyer-dashboard {
-  @include two-thirds;
+  &.index {
+    @include two-thirds;
+  }
 
   .department-name {
     color: #444;

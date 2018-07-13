@@ -24,4 +24,5 @@ class App < PrototypingKit::App
   get_and_render_erb('/simple-guidance/technology/cloud-services', 'simple_guidance/cloud_services')
 
   get_and_render_erb('/buyer-dashboard', 'buyer_dashboard/index')
+  get_and_render_erb('/buyer-dashboard/contracts', 'buyer_dashboard/contracts')
 end
