@@ -1,0 +1,68 @@
+@import 'external_platform/ict_workforce';
+
+.external-platform {
+
+  &.offering {
+    margin-bottom: 4rem;
+  }
+
+  .success-alert {
+    border: .5rem solid #2e8623;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .pathway {
+    @include make-row;
+
+    margin: 1rem 0;
+    background: $light-purple;
+    padding: 1rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .information, .action {
+      @include make-col-ready;
+      padding: 0;
+    }
+
+    .information {
+      @include media-breakpoint-up(md) {
+        @include make-col(8);
+        padding-right: 2rem;
+      }
+    }
+
+    .action {
+      padding-top: 1rem;
+      align-self: center;
+
+      @include media-breakpoint-up(md) {
+        @include make-col(4);
+        text-align: right;
+        padding-top: 0;
+      }
+
+      .destination {
+        font-size: .85rem;
+        padding-top: .5rem;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+}

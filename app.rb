@@ -25,4 +25,9 @@ class App < PrototypingKit::App
 
   get_and_render_erb('/buyer-dashboard', 'buyer_dashboard/index')
   get_and_render_erb('/buyer-dashboard/contracts', 'buyer_dashboard/contracts')
+
+  get_and_render_erb('/external-platform', 'external_platform/start')
+  get_and_render_erb('/external-platform/application', 'external_platform/application')
+  get_and_render_erb('/external-platform/offering', 'external_platform/offering')
+  get_and_render_erb('/external-platform/ict-workforce', 'external_platform/ict_workforce')
 end

@@ -3,4 +3,20 @@
 @import 'digital_nsw_template';
 
 @import 'buyer_dashboard';
+@import 'external_platform';
 @import 'simple_guidance';
+
+.prototypes-list {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+  }
+}
